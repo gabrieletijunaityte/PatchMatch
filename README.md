@@ -1,9 +1,11 @@
-# Matching Marine Debris Patches Across PlanetScope and Sentinel-2 Double Acquisitions (MSc Thesis Project)
+# Matching Marine Debris Patches Across PlanetScope and Sentinel-2 Double Acquisitions
+
+This is the official repository for the paper **"Matching Marine Debris Patches Across PlanetScope and Sentinel-2 Double Acquisitions"**, accepted at the **2nd Workshop on Marine Vision (MaVi)**, in conjunction with **ECCV 2026**.
 
 ---
 
 ## About the project
-This repository contains the dataset, code and experimental model setups for my master's thesis on matching marine debris (MD) patches across multi-platform and multi-temporal imagery (PlanetScope and Sentinel-2 double acquisitions acquired within a one-hour interval). This project involves dataset collection, the Double Acquisition NN development through iterative experimental process and experiments on applying different level drift knowledge to simulate what kind of model performance can be expected in applied scenarios.
+This repository contains the dataset, code, and experimental model setups for matching marine debris (MD) patches across multi-platform and multi-temporal imagery (PlanetScope and Sentinel-2 double acquisitions acquired within a one-hour interval). This project involves dataset collection, the Double Acquisition NN development, and experiments on applying different levels of drift knowledge to simulate what kind of model performance can be expected in applied scenarios.
 
 ## Repository Structure
 
@@ -35,7 +37,7 @@ This repository contains the dataset, code and experimental model setups for my 
 │   └── ProjectDB.py # Python class for project database (sql)
 ├── intermediate/
 │   └── tiles/
-│       ├── *.tif # Extracted (with slightly larger extent, see pre-tiles in the report).
+│       ├── *.tif # Extracted (with slightly larger extent, see pre-tiles in the paper).
 │       ├── ssl_365.json # Map of train/validate/test split per platform.
 │       ├── test_tiles_365.json # Map for positive test pairs 
 |       └── tiles_365.json # Map for positive all pairs
@@ -44,7 +46,7 @@ This repository contains the dataset, code and experimental model setups for my 
 │   ├── predictions/ # Prediction matrices
 │   ├── results/ # Logged test results
 │   └── weights/ # Trained model weigths
-├── plotting/ # functions to create illustrations for the report
+├── plotting/ # functions to create illustrations for the paper
 ├── testing/
 │   ├── classification_metrics.py # Calculates classification metrics
 │   └── retrieval_metrics.py # Calculates retrieval metrics
@@ -118,3 +120,16 @@ python3 main_training.py config/proposed.json
 
 ## Dataset
 Raw imagery is not included in the git repository due to licensing constraints.
+
+## Citation
+
+If you use this code or work in your research, please cite our paper:
+
+```bibtex
+@inproceedings{tijunaityte2026matching,
+  title={Matching Marine Debris Patches Across PlanetScope and Sentinel-2 Double Acquisitions},
+  author={Tijunaityte, Gabriele and others},
+  booktitle={Proceedings of the ECCV 2026 Workshop on Marine Vision (MaVi)},
+  year={2026}
+}
+```
