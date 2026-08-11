@@ -1,0 +1,94 @@
+{
+  "run_name": "refined_15ep",
+  "note": "Refined SSL4EO weights after 15 epoch",
+  "Scenes": {
+    "PS_directory": "data/PS",
+    "S2_directory": "data/S2"
+  },
+  "DB_path": "data/database.db",
+  "Pre_tiles": {
+    "directory": "intermediate/tiles/",
+    "template": "Patch_?_?.tif",
+    "size": 365,
+    "json": "tiles_365.json",
+    "test_json": "test_tiles_365.json",
+    "resample": false,
+    "test_polygon_dir": "data/test_areas/",
+    "validate_polygon_dir": "data/validate_areas/"
+  },
+  "Tiles": {
+    "size": 256,
+    "right_size": 64,
+    "normalise": false,
+    "bandwise": false
+  },
+  "Architecture": {
+    "PS_encoder": "PSResNet18",
+    "S2_encoder": "S2ResNet18",
+    "Backbone": null,
+    "Projection_head": "linear",
+    "hidden_dim": 128,
+    "Loss": "Clip_loss",
+    "Loss_margin": null,
+    "Loss_temperature": 0.07,
+    "Similarity": "Cosine_similarity",
+    "Similarity_threshold": 0.5
+  },
+  "Training": {
+    "general_pretraining": "moco",
+    "ssl_pretraining": true,
+    "freeze": false,
+    "train_positive_probability": 1,
+    "test_validate_positive_probability": 1,
+    "learning_rate": 0.0005,
+    "epochs": 200,
+    "batch_size": 128,
+    "validate_batch": 605,
+    "wandb_project": "DoubleAcquisitionNN",
+    "checkpoint_dir": "output/weights",
+    "augmentation_probability": 0,
+    "augmentations": null
+  },
+  "Testing": {
+    "test_batch": 674,
+    "Prediction_dir": "output/predictions/",
+    "top_ks": [
+      50,
+      10,
+      5,
+      3,
+      1
+    ],
+    "Prediction_figures": "output/figures/",
+    "Results_dir": "output/results/"
+  },
+  "SSL": {
+    "wandb_project": "PatchMatchNN_SSL",
+    "pairs_path": "ssl_365.json",
+    "epochs": 200,
+    "temperature": 0.07,
+    "hidden_dim": 128,
+    "learning_rate": 0.005,
+    "weight_decay": 0.0001,
+    "batch_size": 512,
+    "mode": [
+      "PS",
+      "S2"
+    ],
+    "ssl_augmentations": "harsh",
+    "saved_epoch": 15
+  },
+  "PS_converted": true,
+  "S2_available": true,
+  "GEE_project": "thesis-patchmatchnn",
+  "directories": {
+    "ndi": "intermediate/ndi",
+    "styles": "data/styles",
+    "python": "/Applications/QGIS.app/Contents/MacOS/bin/python3",
+    "annotations": "data/annotations",
+    "projects": "intermediate/qgis"
+  },
+  "ndi_calculated": true,
+  "qgis_projects_created": true,
+  "S2_search_radius": 10
+}

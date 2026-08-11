@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <title>PatchMatch Game</title>
+</head>
+
+<body>
+<header class="header" id="header">
+    <div class="help-container">
+        <button class="help-button">?</button>
+    </div>
+    <div class="title">Can you beat PatchMatchNN @Top-3?</div>
+    <div class="score-container">
+        <div class="score-text" id="user">0</div>
+        <div class="score-text">:</div>
+        <div class='score-text' id="PatchMatch" style="color:#f6992a">0</div>
+    </div>
+</header>
+
+<div class="main" id="question">
+    <div class="question-column">
+        <div class="question-container">
+            <div class="question-text">
+                Find the match for this tile
+            </div>
+            <div class="question-image-container">
+                <img class="question-image" id="PS_tile" src="imgs/demo.png">
+                <div class="question-image-overlay">
+                    <div class="question-image-overlay-text">PlanetScope tile</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="user-control-container" id="feedback-box">
+            <div class="controls-container">
+                <button class="control-button" id="restart-button">Restart</button>
+                <button class="control-button" id="next-button">Next</button>
+            </div>
+            <div class="user-feedback-container">
+                <div class="user-feedback-text" id="user-feedback-text">Make a guess next time!</div>
+            </div>
+        </div>
+
+        <div class="PatchMatchNN-container">
+            <div class="prediction-button-container">
+                <button class="prediction-button" id="PatchMatch-button">PatchMatch prediction</button>
+            </div>
+            <div class="prediction-status-container">
+                <div class="prediction-status" id="prediction-status">PatchMatch is Correct!</div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="answer-column">
+        <div class="answer-option">
+            <div class="answer-image-container" id="answer1">
+                <img alt="Answer 1" class="answer-image" onclick="showText(this)" src="imgs/demo.png">
+                <div class="answer-image-overlay">
+                    <div class="answer-overlay-similarity">PatchMatchNN rank</div>
+                    <div class="answer-overlay-rank"></div>
+                </div>
+            </div>
+        </div>
+        <div class="answer-option">
+            <div class="answer-image-container" id="answer2">
+                <img alt="Answer 2" class="answer-image" onclick="showText(this)" src="imgs/demo.png">
+                <div class="answer-image-overlay">
+                    <div class="answer-overlay-similarity">PatchMatchNN rank</div>
+                    <div class="answer-overlay-rank"></div>
+                </div>
+            </div>
+        </div>
+        <div class="answer-option">
+            <div class="answer-image-container" id="answer3">
+                <img alt="Answer 3" class="answer-image" onclick="showText(this)" src="imgs/demo.png">
+                <div class="answer-image-overlay">
+                    <div class="answer-overlay-similarity">PatchMatchNN rank</div>
+                    <div class="answer-overlay-rank"></div>
+                </div>
+            </div>
+        </div>
+        <div class="answer-option">
+            <div class="answer-image-container" id="answer4">
+                <img alt="Answer 4" class="answer-image" onclick="showText(this)" src="imgs/demo.png">
+                <div class="answer-image-overlay">
+                    <div class="answer-overlay-similarity">PatchMatchNN rank</div>
+                    <div class="answer-overlay-rank">TRIAL</div>
+                </div>
+            </div>
+        </div>
+        <div class="answer-option">
+            <div class="answer-image-container" id="answer5">
+                <img alt="Answer 5" class="answer-image" onclick="showText(this)" src="imgs/demo.png">
+                <div class="answer-image-overlay">
+                    <div class="answer-overlay-similarity">PatchMatchNN rank</div>
+                    <div class="answer-overlay-rank">TRIAL</div>
+                </div>
+            </div>
+        </div>
+        <div class="answer-option">
+            <div class="answer-image-container" id="answer6">
+                <img alt="Answer 6" class="answer-image" onclick="showText(this)" src="imgs/demo.png">
+                <div class="answer-image-overlay">
+                    <div class="answer-overlay-similarity">PatchMatchNN rank</div>
+                    <div class="answer-overlay-rank">TRIAL</div>
+                </div>
+            </div>
+        </div>
+        <div class="answer-option">
+            <div class="answer-image-container" id="answer7">
+                <img alt="Answer 7" class="answer-image" onclick="showText(this)" src="imgs/demo.png">
+                <div class="answer-image-overlay">
+                    <div class="answer-overlay-similarity">PatchMatchNN rank</div>
+                    <div class="answer-overlay-rank"></div>
+                </div>
+            </div>
+        </div>
+        <div class="answer-option">
+            <div class="answer-image-container" id="answer8">
+                <img alt="Answer 8" class="answer-image" onclick="showText(this)" src="imgs/demo.png">
+                <div class="answer-image-overlay">
+                    <div class="answer-overlay-similarity">PatchMatchNN rank</div>
+                    <div class="answer-overlay-rank"></div>
+                </div>
+            </div>
+        </div>
+        <div class="answer-option">
+            <div class="answer-image-container" id="answer9">
+                <img alt="Answer 9" class="answer-image" onclick="showText(this)" src="imgs/demo.png">
+                <div class="answer-image-overlay">
+                    <div class="answer-overlay-similarity">PatchMatchNN rank</div>
+                    <div class="answer-overlay-rank"></div>
+                </div>
+            </div>
+        </div>
+        <div class="answer-option">
+            <div class="answer-image-container" id="answer10">
+                <img alt="Answer 9" class="answer-image" onclick="showText(this)" src="imgs/demo.png">
+                <div class="answer-image-overlay">
+                    <div class="answer-overlay-similarity">PatchMatchNN rank</div>
+                    <div class="answer-overlay-rank"></div>
+                </div>
+            </div>
+        </div>
+        <div class="answer-option">
+            <div class="answer-image-container" id="answer11">
+                <img alt="Answer 9" class="answer-image" onclick="showText(this)" src="imgs/demo.png">
+                <div class="answer-image-overlay">
+                    <div class="answer-overlay-similarity">PatchMatchNN rank</div>
+                    <div class="answer-overlay-rank"></div>
+                </div>
+            </div>
+        </div>
+        <div class="answer-option">
+            <div class="answer-image-container" id="answer12">
+                <img alt="Answer 9" class="answer-image" onclick="showText(this)" src="imgs/demo.png">
+                <div class="answer-image-overlay">
+                    <div class="answer-overlay-similarity">Similarity</div>
+                    <div class="answer-overlay-rank">Rank</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

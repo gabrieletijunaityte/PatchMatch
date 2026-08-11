@@ -1,0 +1,54 @@
+# Zip files
+**.[zZ][iI][pP]
+**.7[zZ]
+**.[rR][aA][rR]
+
+# Img files
+**.[pP][nN][gG]
+**.[jJ][pP][gG]
+**.[jJ][pP][eE][gG]
+**.[tT][iI][fF]
+**.[tT][iI][fF][fF]
+**.[gG][iI][fF]
+
+# vector files
+**.[gG][eE][oO][jJ][sS][oO][nN]
+
+# Other, test files
+**.db
+scratch.py
+test**.py
+**test**.sh
+**DS_Store**
+**.csv
+
+# Slurm files
+slurm**
+
+# directories
+data
+output
+trial
+intermediate
+untracked
+.venv
+.idea
+.idea/*
+vPatchMatchNN
+wandb/
+lightning_logs/
+PatchMatchNN_trial_runs/
+weights
+game/quiz/questions.json
+game/quiz/imgs/*.png
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+multiInst
+-
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
