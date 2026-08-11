@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "20181031_093404_1004_3B_AnalyticMS",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "geometry": { "type": "LineString", "coordinates": [ [ 0.0, 0.0 ], [ 1.0, 1.0 ] ] } },
+{ "type": "Feature", "properties": { }, "geometry": { "type": "LineString", "coordinates": [ [ 340522.583324042905588, 5052245.531048218719661 ], [ 339817.560669398517348, 5051797.779818426817656 ] ] } },
+{ "type": "Feature", "properties": { }, "geometry": { "type": "LineString", "coordinates": [ [ 341195.447050580638461, 5052329.639014036394656 ], [ 340475.581813733268064, 5052087.210171386599541 ] ] } },
+{ "type": "Feature", "properties": { }, "geometry": { "type": "LineString", "coordinates": [ [ 341719.88495508802589, 5052366.745469543151557 ], [ 340903.542933920864016, 5052210.898356411606073 ] ] } }
+]
+}

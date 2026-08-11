@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "20190424_073843_1105_3B_AnalyticMS_clip",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "geometry": { "type": "LineString", "coordinates": [ [ 0.0, 0.0 ], [ 1.0, 1.0 ] ] } },
+{ "type": "Feature", "properties": { }, "geometry": { "type": "LineString", "coordinates": [ [ 314526.965367340890225, 6695917.444886401295662 ], [ 314215.157187228149269, 6695546.186897628940642 ] ] } },
+{ "type": "Feature", "properties": { }, "geometry": { "type": "LineString", "coordinates": [ [ 314477.221649891056586, 6695773.066779656335711 ], [ 314064.712773476843722, 6695443.05967852473259 ] ] } },
+{ "type": "Feature", "properties": { }, "geometry": { "type": "LineString", "coordinates": [ [ 314614.948584541911259, 6696053.95364473760128 ], [ 314397.10075968928868, 6695672.180723956786096 ] ] } }
+]
+}
